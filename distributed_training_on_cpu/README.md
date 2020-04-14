@@ -20,7 +20,9 @@
 - Docker (latest from linux APT/YUM repositories)
 
 ## 手順
-本手順では、Dockerコンテナを用います。なお、複数台のサーバーのうち、1台をマスターノード、それ以外をSlaveノードとして作業を進めてください。
+本手順は、[こちら](https://software.intel.com/en-us/articles/using-intel-xeon-processors-for-multi-node-scaling-of-tensorflow-with-horovod)をベースに、Dockerコンテナを用いた方法に拡張したものです。なお、複数台のサーバーのうち、1台をマスターノード、それ以外をSlaveノードとして作業を進めてください。
+
+（注）物理サーバーでも、仮想サーバーでも動くと思いますが、物理サーバーでしか検証しておりません。
 1. Dockerのインストール：全ノード（参照元は[ここ](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)）
     - sudo apt update
     - sudo apt install apt-transport-https ca-certificates curl software-properties-common
