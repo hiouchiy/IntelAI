@@ -65,7 +65,7 @@
 - docker login
 - docker push 新イメージのタグ名
 
-# 参考
+## 参考
 - [Intel Tensorflow Quantization Tool](https://github.com/IntelAI/tools/blob/master/api/README.md#quantization-python-programming-api-quick-start)
 - [Intel Tensorflow Quantization Tool（日本語訳）※非公式](https://github.com/hiouchiy/IntelAI/blob/master/tensorflow_quantization/tf_quantization_ja.md)
 - [OpenVINO Post-training Optimization Toolkit](https://docs.openvinotoolkit.org/latest/_README.html)
