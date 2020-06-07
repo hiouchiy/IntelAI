@@ -20,7 +20,7 @@
 >このコンテナには、Python v3.6、Intel TensorFlow v1.15.2、Intel® OpenVINO™ Toolkit 2020R3、および周辺ライブラリやツールがプリインストールされています。どのように作ったかを知りたい場合は最後の「おまけ（Dockerイメージを作るまで）」を参照下さい。
 
 >注:
->このデモでは、ホストマシンにImageNet Large Scale Visual Recognition Competition 2012のValidationデータ（50,000枚）を準備しています。本データは[ImageNet](http://www.image-net.org/challenges/LSVRC/2012/)の公式サイトからダウンロードください。
+>このデモでは、ホストマシンにImageNet Large Scale Visual Recognition Competition 2012のValidationデータ（50,000枚）を準備しています。本データは[ImageNet](http://www.image-net.org/challenges/LSVRC/2012/)の公式サイトからダウンロードください。または、適当なデータをご利用ください。
 
 ### Githubから必要なリポジトリをクローン
 - cd ~
@@ -57,7 +57,7 @@
 - cd workspace
 - [こちら](https://raw.githubusercontent.com/hiouchiy/IntelAI/master/tensorflow_quantization/Dockerfile)のDockerfileをダウンロード
 - docker build . -t イメージ名
-- docker run -it -p 8008:8008 --privileged -v ローカル画像フォルダ:コンテナ内画像フォルダ "イメージ名"
+- docker run -it -p 8008:8008 --privileged "イメージ名"
 - [こちら](https://qiita.com/JIwatani/items/ae1acb0878610fef3da8)を参考にJupyter Notebookをコンテナ上にインストール
 - ctrl+p, ctrl+qでコンテナを一旦抜ける（コンテナを終了はしない）
 - docker ps -a で今抜けたコンテナのIDを確認
