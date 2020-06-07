@@ -1,6 +1,9 @@
 # 画像認識モデルの最適化と量子化（ResNet50／ResNet50v1.5）
 
-Content:
+>NOTE:
+>こちらはインテルのTensorFlow用量子化ツールの使い方を日本語訳したものです。オリジナル版は[こちら](https://github.com/IntelAI/models/blob/master/docs/image_recognition/quantization/Tutorial.md)を参照ください。(2020年6月2日現在)
+
+目次:
 * [ゴール](#goal)
 * [前提条件](#prerequisites)
 * [FP32モデルをINT8へ量子化](#floating-point-32-bits-model-quantization-to-8-bits-precision)
