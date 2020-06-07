@@ -38,6 +38,8 @@
 ### Jupyter Notebookを起動
 - cd ~
 - KMP_AFFINITY=granularity=fine,compact,1,0 KMP_BLOCKTIME=1 KMP_SETTINGS=1 OMP_NUM_THREADS=24 numactl -N 0 -m 0 nohup jupyter notebook --ip 0.0.0.0 --allow-root > /dev/null 2>&1 &
+
+ちなみにこの4つの環境変数はIntel Tensorflow用です。それぞれ下記のような意味があります。更に詳しく知りたい場合は[こちら](https://software.intel.com/content/www/us/en/develop/articles/maximize-tensorflow-performance-on-cpu-considerations-and-recommendations-for-inference.html)へ。
    - KMP_AFFINITY・・・
    - KMP_BLOCKTIME・・・
    - KMP_SETTINGS・・・
