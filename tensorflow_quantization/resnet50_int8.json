@@ -17,7 +17,7 @@
             "data_source": "/imagenet/images",
             "annotation_conversion": {
                   "converter": "imagenet",
-                  "annotation_file": "val.txt"
+                  "annotation_file": "/imagenet/val.txt"
             },
             "reader": "pillow_imread",
             "preprocessing":[
