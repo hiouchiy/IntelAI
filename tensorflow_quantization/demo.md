@@ -16,9 +16,11 @@
 - docker pull hiouchiy/openvino2020r3-configured-on-cpu-with-inteltf1.15.2
 - docker run -it -p 8008:8008 --privileged -v ~/imagenet:/imagenet hiouchiy/openvino2020r3-configured-on-cpu-with-inteltf1.15.2
 
-このコンテナには、Python v3.6、Intel TensorFlow v1.15.2、Intel® OpenVINO™ Toolkit 2020R3、および周辺ライブラリやツールがプリインストールされています。どのように作ったかを知りたい場合は最後の「おまけ（Dockerイメージを作るまで）」を参照下さい。
+>注:
+>このコンテナには、Python v3.6、Intel TensorFlow v1.15.2、Intel® OpenVINO™ Toolkit 2020R3、および周辺ライブラリやツールがプリインストールされています。どのように作ったかを知りたい場合は最後の「おまけ（Dockerイメージを作るまで）」を参照下さい。
 
-このデモでは、ホストマシンにImageNet Large Scale Visual Recognition Competition 2012のValidationデータ（50,000枚）を準備しています。本データは[ImageNet](http://www.image-net.org/challenges/LSVRC/2012/)の公式サイトからダウンロードください。
+>注:
+>このデモでは、ホストマシンにImageNet Large Scale Visual Recognition Competition 2012のValidationデータ（50,000枚）を準備しています。本データは[ImageNet](http://www.image-net.org/challenges/LSVRC/2012/)の公式サイトからダウンロードください。
 
 ### Githubから必要なリポジトリをクローン
 - cd ~
@@ -39,11 +41,12 @@
 - cd ~
 - KMP_AFFINITY=granularity=fine,compact,1,0 KMP_BLOCKTIME=1 KMP_SETTINGS=1 OMP_NUM_THREADS=24 numactl -N 0 -m 0 nohup jupyter notebook --ip 0.0.0.0 --allow-root > /dev/null 2>&1 &
 
-ちなみにこの4つの環境変数はIntel Tensorflow用です。それぞれ下記のような意味があります。更に詳しく知りたい場合は[こちら](https://software.intel.com/content/www/us/en/develop/articles/maximize-tensorflow-performance-on-cpu-considerations-and-recommendations-for-inference.html)へ。
-   - KMP_AFFINITY・・・
-   - KMP_BLOCKTIME・・・
-   - KMP_SETTINGS・・・
-   - OMP_NUM_THREADS・・・1ソケットの物理コア数
+>注:
+>ちなみにこの4つの環境変数はIntel Tensorflow用です。それぞれ下記のような意味があります。更に詳しく知りたい場合は[こちら](https://software.intel.com/content/www/us/en/develop/articles/maximize-tensorflow-performance-on-cpu-considerations-and-recommendations-for-inference.html)へ。
+>   - KMP_AFFINITY・・・
+>   - KMP_BLOCKTIME・・・
+>   - KMP_SETTINGS・・・
+>   - OMP_NUM_THREADS・・・1ソケットの物理コア数
 
 ### Webブラウザからアクセス
 - https://<ホストマシンのIPアドレス>:8008
