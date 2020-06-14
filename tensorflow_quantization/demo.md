@@ -51,6 +51,8 @@
 ### Webブラウザからアクセス
 - https://<ホストマシンのIPアドレス>:8008
 - パスワードは「intel」
+- quantizationフォルダ内の「QuantizationHowto.ipynb」をクリック
+- あとはNotebook内の指示に従う
 
 ## おまけ（Dockerイメージを作るまで）
 - mkdir workspace
