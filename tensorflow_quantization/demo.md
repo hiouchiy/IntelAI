@@ -28,7 +28,7 @@
 - git checkout v1.5.0 (※今回はIntel TensorFlow v1.15.2 を使うため)
 - cd ~
 - git clone https://github.com/IntelAI/tools.git quantization && cd quantization
-- wget https://raw.githubusercontent.com/hiouchiy/IntelAI/master/tensorflow_quantization/Quantization%20How-to.ipynb
+- wget https://raw.githubusercontent.com/hiouchiy/IntelAI/master/tensorflow_quantization/QuantizationHowto.ipynb
 
 ### OpenVINOのAccuracyChekerとPost-training Optimization Toolkitをセットアップ
 - cd /opt/intel/openvino/deployment_tools/open_model_zoo/tools/accuracy_checker
