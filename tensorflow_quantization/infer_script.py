@@ -279,6 +279,5 @@ if __name__ == '__main__':
     if args.openvino:
         model_type = 'openvino'
 
-    print("Start if __name__ == '__main__'")
-    print('call func()')
+    print('Starting inference...')
     tf_total_time, tf_infer_time = run_inference(model_file, model_type=model_type, dataset_dir=dataset_dir, total=args.num_images)
