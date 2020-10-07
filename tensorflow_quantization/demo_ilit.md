@@ -27,7 +27,7 @@
 - git clone https://github.com/IntelAI/models.git models && cd models 
 - git checkout v1.5.0 (※今回はIntel TensorFlow v1.15.2 を使うため)
 - cd ~
-- git clone https://github.com/intel/lp-opt-tool.git ilit && cd ilit
+- git clone https://github.com/intel/lp-opt-tool.git ilit && cd ilit/examples/tensorflow/image_recognition
 - wget https://raw.githubusercontent.com/hiouchiy/IntelAI/master/tensorflow_quantization/how_to_quantize_with_ilit.ipynb
 
 ### OpenVINOのAccuracyChekerとPost-training Optimization Toolkitをセットアップ
