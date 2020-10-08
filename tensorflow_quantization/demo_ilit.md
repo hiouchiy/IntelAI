@@ -38,7 +38,7 @@
 - source /opt/intel/openvino/bin/setupvars.sh
 
 ### Jupyter Notebookを起動
-- cd ~
+- cd ~/ilit/examples/tensorflow/image_recognitioncd
 - KMP_AFFINITY=granularity=fine,compact,1,0 KMP_BLOCKTIME=1 KMP_SETTINGS=1 OMP_NUM_THREADS=サーバーの物理コア数 numactl -N 0 -m 0 nohup jupyter notebook --ip 0.0.0.0 --allow-root > /dev/null 2>&1 &
 
 >注:
