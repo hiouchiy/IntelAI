@@ -58,6 +58,7 @@
     - /usr/sbin/sshd -p 12345; sleep infinity
 1. Training Jobを実行：Masterノード（1ソケット24コアを2ソケット搭載したサーバーを2台使用する場合）
     - HOROVOD_FUSION_THRESHOLD=134217728 mpirun -np 8 --map-by ppr:2:socket:pe=12 --allow-run-as-root --mca plm_rsh_args "-p 12345" -mca btl_tcp_if_include eno1 -mca btl ^openib -mca pml ob1 -H <MasterノードのIPアドレス>:9999,<SlaveノードのIPアドレス>:9999 --oversubscribe --report-bindings -x LD_LIBRARY_PATH -x HOROVOD_FUSION_THRESHOLD -x OMP_NUM_THREADS=11 -x KMP_BLOCKTIME=1 -x KMP_AFFINITY=granularity=fine,verbose,compact,1,0 python3 -u /workspace/benchmarks/scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --model resnet50 --batch_size 64 --num_batches 40 --distortions=False --num_intra_threads 10 --num_inter_threads 1 --local_parameter_device cpu --variable_update horovod --horovod_device cpu
+	- ※各パラメータの説明には[こちら（英語）](TF_HVD_Docker.pdf)をご覧ください。
 
 ## Kubernetes上での実行方法
 製作中．．．
